@@ -26,7 +26,7 @@ lr = LinearRegression()
 lr.fit(X_train_scaled, y_train)
 lr_mae = mean_absolute_error(y_test, lr.predict(X_test_scaled))
 
-rf = RandomForestRegressor(n_estimators=150, random_state=42)
+rf = RandomForestRegressor(n_estimators=150, max_depth=8, random_state=42)
 rf.fit(X_train, y_train)
 rf_mae = mean_absolute_error(y_test, rf.predict(X_test))
 
